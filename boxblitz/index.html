@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>БоксБлиц</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="title1">
+        <h1>БоксБлиц</h1>
+    </div>
+    <div class="container2">
+    <img src="images/background3.jpg" alt="Фон">
+    </div>
+    <div class="container">
+        <h1>Добро пожаловать в мир бокса!</h1>
+        <a href="rules.html" class="button">Правила бокса</a>
+        <a href="technique.html" class="button">Техника</a>
+        <a href="photos.html" class="button">Фотолента</a>
+        <a href="history.html" class="button">История</a>
+    </div>
+    <script>
+        var buttons = document.querySelectorAll('.button');
+        buttons.forEach(function (button) {
+            button.addEventListener('mouseover', function () {
+                button.style.transform = 'scale(1.1)';
+            });
+            button.addEventListener('mouseout', function () {
+                button.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+    <script>
+        var title = document.querySelector('.title1 h1');
+        function blink() {
+            title.style.opacity = 0;
+            setTimeout(function () {
+                title.style.opacity = 1;
+            }, 500);
+        }
+        setInterval(blink, 1500);
+    </script>
+</body>
+
+</html>
